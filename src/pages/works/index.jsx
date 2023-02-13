@@ -1,47 +1,56 @@
-import { BgImage } from './../../assets';
+import { SocialIcon } from 'react-social-icons';
+import { ImgBg, ImgWork1, ImgWork2, ImgWork3, ImgWork4 } from './../../assets';
+
 const worksData = [
   {
-    title: 'title 1',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores harum natus consequuntur in assumenda nemo, quae fuga quo dolorem quos.1',
-    demo: 'demo 1',
-    repo: 'repo 1',
+    id: '1',
+    src: ImgWork1,
+    title: 'Portfolio React 2',
+    desc: 'Portfolio website created using react styled-components & bootstrap',
+    demo: 'https://syahrizal-portfolio.vercel.app/',
+    repo: 'https://github.com/Gombeng/react-portfolio',
   },
   {
-    title: 'title 2',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores harum natus consequuntur in assumenda nemo, quae fuga quo dolorem quos.2',
-    demo: 'demo 2',
-    repo: 'repo 2',
+    id: '2',
+    src: ImgWork2,
+    title: 'Portfolio React 1',
+    desc: 'My first portfolio website created using react and scss',
+    demo: 'https://syahrizal-portfolio.web.app/',
+    repo: 'https://github.com/Gombeng/react-portfolio',
   },
   {
-    title: 'title 3',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores harum natus consequuntur in assumenda nemo, quae fuga quo dolorem quos.3',
-    demo: 'demo 3',
-    repo: 'repo 3',
+    id: '3',
+    src: ImgWork3,
+    title: 'Easely Quiz',
+    desc: 'Quiz app build using react and get the question data from api',
+    demo: 'https://easely-quiz.vercel.app/',
+    repo: 'https://github.com/Gombeng/easely-quiz',
   },
   {
-    title: 'title 4',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores harum natus consequuntur in assumenda nemo, quae fuga quo dolorem quos.4',
-    demo: 'demo 4',
-    repo: 'repo 4',
+    id: '4',
+    src: ImgWork4,
+    title: 'Kitteni',
+    desc: 'Application to display all the cute cat from around the world',
+    demo: 'https://kitteni.vercel.app/',
+    repo: 'https://github.com/Gombeng/kitteni',
   },
 ]
 
-
-const WorksCard = ({ title, desc, demo, repo }) => {
-
+const WorksCard = ({ src, title, desc, demo, repo }) => {
   return (
     <div className="carousel-item active">
-      <div class="card m-auto" style={{ width: '70%' }}>
-        <div class="row g-0 align-items-center">
-          <div class="col-md-6">
-            <img src={BgImage} class="img-fluid rounded-start" alt="..." />
+      <div className="card m-auto" style={{ width: '70%' }}>
+        <div className="row g-0 align-items-center">
+          <div className="col-lg-7">
+            <img src={src} className="img-fluid rounded-start" alt="..." />
           </div>
-          <div class="col-md-6">
-            <div class="card-body text-start">
-              <h5 class="card-title">{title}</h5>
-              <p class="card-text">{desc}</p>
-              <a href="#" className="btn btn-outline-danger p-2 px-5 rounded-start-5 me-1">{repo}</a>
-              <a href="#" className="btn btn-danger p-2 px-5 rounded-end-5">{demo}</a>
+          <div className="col-lg-5 text-center text-md-start">
+            <div className="card-body">
+              <h5 className="card-title mb-2 fw-bold">{title}</h5>
+              <p className="card-text mb-3">{desc}</p>
+              {/* <a href={repo} target='_blank' className="btn btn-outline-danger p-2 px-5 rounded-start-5 me-1">Repo</a> */}
+              <a href={demo} target='_blank' className="btn btn-danger p-2 px-5 rounded-5 me-2">Demo</a>
+              <SocialIcon style={{ scale: '.85' }} url={repo} />
             </div>
           </div>
         </div>
@@ -53,18 +62,18 @@ const WorksCard = ({ title, desc, demo, repo }) => {
 const Works = () => {
   return (
     <div id='works' className='container-fluid d-flex justify-content-center align-items-center vh-100'>
-      <div className='w-100 text-center'>
-        {/* <h3 className='mb-5 text-light'>Works</h3> */}
+      <div className='w-100'>
+        {/* <h3 className='mb-5 p-2 w-50 mx-auto rounded-5 card text-center d-md-none'>Swipe it</h3> */}
 
         <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-inner">
-            {worksData.map(({ ...rest }) => <WorksCard {...rest} />)}
+            {worksData.map(({ id, ...rest }) => <WorksCard key={id} {...rest} />)}
           </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <button className="carousel-control-prev d-md-block" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Previous</span>
           </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <button className="carousel-control-next d-md-block" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Next</span>
           </button>

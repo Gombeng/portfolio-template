@@ -4,15 +4,14 @@ const About = () => {
   return (
     <div id='about' className='container-fluid text-center bg-warning d-flex justify-content-center align-items-center vh-100'>
       <div className='p-5'>
-        <h1 className=' mb-5'>About Me</h1>
-
-        <div className="d-flex gap-5">
-
-          <div className="w-50">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus tenetur repudiandae aliquid veniam esse rerum cumque sequi quo repellendus porro modi delectus temporibus dolorem exercitationem soluta aspernatur, praesentium vero debitis.</p>
+        <h1 className='mb-5'>About Me</h1>
+        <div className="row">
+          <div className="col-md-6">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus tenetur repudiandae aliquid veniam esse rerum cumque sequi quo</p>
           </div>
-          <div className="w-50">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus tenetur repudiandae aliquid veniam esse rerum cumque sequi quo repellendus porro modi delectus temporibus dolorem exercitationem soluta aspernatur, praesentium vero debitis.</p>
+          <hr className="d-md-none" />
+          <div className="col-md-6">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus tenetur repudiandae aliquid veniam esse rerum cumque sequi quo dolorem exercitationem soluta aspernatur, praesentium vero debitis.</p>
           </div>
         </div>
       </div>
