@@ -34,7 +34,7 @@ const Home = () => {
         <div className="my-3">
           {social.map(({ id, ...rest }) => <SocialIcon key={id} style={{ scale: '.85' }} className='mx-2' {...rest} />)}
         </div>
-        <button className="btn btn-danger p-2 px-5 me-1 rounded-5">Download CV</button>
+        <a href="https://drive.google.com/file/d/13uL2NZ9gVVz29y8J1EMNBuFhvTp0dnAV/view" className="btn btn-danger p-2 px-5 me-1 rounded-5" target='_blank' rel="noreferrer">Download CV</a>
       </div>
     </div>
 

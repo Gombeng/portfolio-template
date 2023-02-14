@@ -19,6 +19,7 @@ const Contact = () => {
       .then((result) => {
         alert("Sent")
         setLoading(false)
+        e.target.reset();
       }, (error) => {
         console.log(error.text);
       });

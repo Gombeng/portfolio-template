@@ -1,5 +1,5 @@
 import { SocialIcon } from 'react-social-icons';
-import { ImgBg, ImgWork1, ImgWork2, ImgWork3, ImgWork4 } from './../../assets';
+import { ImgBg, ImgWork1, ImgWork2, ImgWork3, ImgWork4, ImgWork5 } from './../../assets';
 
 const worksData = [
   {
@@ -33,6 +33,14 @@ const worksData = [
     desc: 'Application to display all the cute cat from around the world',
     demo: 'https://kitteni.vercel.app/',
     repo: 'https://github.com/Gombeng/kitteni',
+  },
+  {
+    id: '5',
+    src: ImgWork5,
+    title: 'Denote',
+    desc: 'Never lost any idea again, create note now!',
+    demo: 'https://denote-mern.vercel.app/signup',
+    repo: 'https://github.com/Gombeng/denote-mern',
   },
 ]
 

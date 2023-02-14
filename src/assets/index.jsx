@@ -3,6 +3,7 @@ import ImgWork1 from './works/porto-1.png'
 import ImgWork2 from './works/porto-2.png'
 import ImgWork3 from './works/porto-3.png'
 import ImgWork4 from './works/porto-4.png'
+import ImgWork5 from './works/porto-5.png'
 
 export {
   ImgBg,
@@ -10,4 +11,5 @@ export {
   ImgWork2,
   ImgWork3,
   ImgWork4,
+  ImgWork5,
 }
